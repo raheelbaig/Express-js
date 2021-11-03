@@ -9,14 +9,14 @@ app.get("/users",(req,res)=>{
     res.send(users)
 });
 app.get("/users/:id",(req,res)=>{
-  if(users[req.params.id]){
 
-    res.send(
-      users[req.params.id].name = req.body.name,
-      users[req.params.id].email = req.body.email,
-      users[req.params.id].pass = req.body.pass
-      )
+    
+  if (users[req.params.id]) {
+    res.send(users[req.params.id])
+  } else {
+    res.send("user not found");
   }
+  
 });
 
 
