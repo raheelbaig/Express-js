@@ -71,6 +71,6 @@ app.get("/about",(req,res)=>{
     res.send("Kamran here how can i do for you!!")
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
