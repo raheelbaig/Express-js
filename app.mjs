@@ -2,9 +2,7 @@ import express from "express";
 
 const app = express();
 const port = process.env.PORT || 3000;
-app.listen(3000, () => {
-    console.log(`server is running on port ${port}`);
-});
+
 let users = [];
 app.use(express.json())
 app.get("/users",(req,res)=>{
@@ -73,3 +71,6 @@ app.get("/about",(req,res)=>{
     res.send("Kamran here how can i do for you!!")
 });
 
+app.listen(3000, () => {
+  console.log(`server is running on port ${port}`);
+});
